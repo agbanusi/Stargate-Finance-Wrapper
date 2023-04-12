@@ -52,7 +52,9 @@ function App() {
       console.log({ preview, address });
       setPreview(preview + "");
     })();
-  }, [choice, amount]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [choice, address, amount]);
 
   const execute = async () => {
     if (choice === 0) {
